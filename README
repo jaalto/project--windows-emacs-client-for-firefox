@@ -1,0 +1,4 @@
+1. Copy the *.bat file to Emacs installation directory bin/
+2. Install Firefox extension It's All Text
+   https://addons.mozilla.org/en-US/firefox/addon/4125
+3. Configure add on to call this bat file
