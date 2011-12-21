@@ -1,7 +1,7 @@
 
-ROOT		= c:\\tmp\\opt\\emacs-23.3\\bin
-RUNEMACS 	= $(ROOT)\\runemacs.exe
-EMACSCLIENTW 	= $(ROOT)\\emacsclientw.exe
+ROOT		= c:/tmp/opt/emacs-23.3/bin
+RUNEMACS 	= $(ROOT)/runemacs.exe
+EMACSCLIENTW 	= $(ROOT)/emacsclientw.exe
 CFLAGS   	= --ansi --pedantic -Wall -g
 BIN	 	= eclient.exe
 
