@@ -10,6 +10,6 @@ $(BIN): eclient.c
 
 install: all
 	dir=$$(dirname $$(cygpath -u $(RUNEMACS))); \
-	install -m 755 $(Bin) $$dir/$(BIN)
+	install -m 755 $(BIN) $$dir/$(BIN)
 
 # End of file
