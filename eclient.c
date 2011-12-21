@@ -10,9 +10,13 @@
 #define RUNEMACS "c:\\tmp\\opt\\emacs-23.3\\bin\\runemacs.exe"
 #endif
 
+#ifndef EMACSCLIENTW
+#define EMACSCLIENTW "c:\\tmp\\opt\\emacs-23.3\\bin\\emacsclientw.exe"
+#endif
+
 int main (int argc, char * const argv[])
 {
-    char *bin = "emacsclientw.exe";
+    char *bin = EMACSCLIENTW;
 
     char *arr[4];
     arr[0] = "--no-wait";
