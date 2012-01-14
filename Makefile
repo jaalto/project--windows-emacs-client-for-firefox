@@ -29,6 +29,7 @@ CYGFLAGS	= -Wl,-subsystem,windows
 
 BIN		= eclient.exe
 
+# Rule: all - compile Cygwin wrapper to emacsclient (eclient)
 all: $(BIN)
 
 $(BIN): eclient.c
@@ -38,8 +39,13 @@ $(BIN): eclient.c
 		-DEMACSCLIENTW='"$(EMACSCLIENTW)"' \
 		$(CFLAGS) -o $(BIN) $<
 
+# Rule: install - install to Emacs bin/ directory
 install: all
 	dir=$$(dirname $$(cygpath -u $(RUNEMACS))); \
 	install -m 755 $(BIN) $$dir/$(BIN)
+
+# Rule: help - display Makefile rules
+help:
+	grep "^# Rule:" Makefile | sort
 
 # End of file
