@@ -1,9 +1,13 @@
 Using Windows Emacs to edit forms in Firefox
 ============================================
 
-Windows Firefox can call Emacs when you want to edit a text area in Web
-page more confortable. Want to edit Wikipedia article in Emacs? Howabout
-writing contact feedback form in a Web page using Emacs editor? It's possible.
+Windows Firefox can be configured to use Emacs to edit a text input
+area in a Web page. Want to edit Wikipedia article in Emacs? It's
+much more convenient when you can use supporting modes like
+`wikipedia.el <http://www.emacswiki.org/emacs/WikipediaMode>`_.
+Howabout writing We page's contact feedback form using Emacs
+editor? Compose a Web based bug reporting form in Emacs? It's all
+possible.
 
 Project Homepage: <https://github.com/jaalto/project--windows-emacs-client-for-firefox>
 
