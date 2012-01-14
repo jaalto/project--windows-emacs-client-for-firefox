@@ -26,7 +26,7 @@ Installation
 2. Start Cygwin shell.
 
 3. Compile and install the helper which the Firefox extension
-   *It's all text* will call ::
+   *It's all text* will be calling ::
 
     make ROOT="c:/your/path/to/emacs-23.3/bin" all install
 
