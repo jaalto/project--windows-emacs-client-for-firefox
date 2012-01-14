@@ -26,7 +26,7 @@ Installation
 
 0. Configure Emacs to be on "server mode". See
    `Emacs Wiki <http://www.emacswiki.org/emacs/EmacsClient>`_
-   for mor einformation. Basicly add this to ``~/.emacs`` ::
+   for more information. Basicly add this to ``~/.emacs`` ::
 
     (server-edit)
 
