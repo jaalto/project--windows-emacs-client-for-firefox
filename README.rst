@@ -1,17 +1,21 @@
-Using Emacs to edit forms in Firefox
-====================================
+Using Windows Emacs to edit forms in Firefox
+============================================
 
-Firefox can call Emacs when you want to edit a text area in Web
+Windows Firefox can call Emacs when you want to edit a text area in Web
 page more confortable. Want to edit Wikipedia article in Emacs? Howabout
 writing contact feedback form in a Web page using Emacs editor? It's possible.
+
+Project Homepage: <https://github.com/jaalto/project--windows-emacs-client-for-firefox>
 
 Requirements
 ------------
 
 * `Emacs for Windows <https://pinboard.in/u:jariaalto/t:emacs/t:software>`_
-* `Cygwin for Windows <http://cygwin.com>`_. Install gcc, make and other build tools
+* `Cygwin for Windows <http://cygwin.com>`_.
+   Install gcc, make and other build tools
 * `Firefox for Windows <http://firefox.com>`_.
-*  Firefox extension `It's All Text <https://addons.mozilla.org/en-US/firefox/addon/4125>`_
+* `It's All Text <https://addons.mozilla.org/en-US/firefox/addon/4125>`_
+  Firefox extension.
 
 Installation
 ------------
