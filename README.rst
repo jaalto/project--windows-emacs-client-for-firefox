@@ -11,6 +11,9 @@ possible.
 
 Project Homepage: <https://github.com/jaalto/project--windows-emacs-client-for-firefox>
 
+.. _pic Extension: https://github.com/jaalto/project--windows-emacs-client-for-firefox/blob/master/pic/firefox--its-all-text--emacs.jpg
+.. _pic Edit Page: https://github.com/jaalto/project--windows-emacs-client-for-firefox/blob/master/pic/firefox--its-all-text.jpg
+
 Requirements
 ------------
 
@@ -37,10 +40,10 @@ Installation
 4. In Firefox menu *Add-ons*, select "options" for extension "It's all text"
    and point it to compiled **eclient.exe**
 
-.. image:: pic/firefox--its-all-text--emacs.jpg
+.. image:: `pic Extension`_
 
 That's it. Visit wikipedia, and you should be able to edit the page by
 clicking the blue "edit" icon that appears on mouse hover near the lower
 right corner of the text input area.
 
-.. image:: pic/firefox--its-all-text.jpg
+.. image:: `pic Edit Page`_
