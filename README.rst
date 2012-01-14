@@ -14,7 +14,7 @@ Project Homepage: <https://github.com/jaalto/project--windows-emacs-client-for-f
 Requirements
 ------------
 
-* `Emacs for Windows <https://pinboard.in/u:jariaalto/t:emacs/t:software>`_
+* `Native Emacs for Windows <https://pinboard.in/u:jariaalto/t:emacs/t:software>`_.
 * `Cygwin for Windows <http://cygwin.com>`_.
   Install gcc, make and other build tools
 * `Firefox for Windows <http://firefox.com>`_.
