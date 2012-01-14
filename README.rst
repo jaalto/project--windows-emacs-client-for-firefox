@@ -31,7 +31,7 @@ Installation
     make ROOT="c:/your/path/to/emacs-23.3/bin" all install
 
 4. In Firefox menu *Add-ons*, select "options" for extension "It's all text"
-   and point it to compiled ``eclient.exe``
+   and point it to compiled **eclient.exe**
 
 .. image:: pic/firefox--its-all-text--emacs.jpg
 
