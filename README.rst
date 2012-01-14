@@ -39,8 +39,9 @@ Installation
 
 .. image:: https://github.com/jaalto/project--windows-emacs-client-for-firefox/raw/master/pic/firefox--its-all-text--emacs.jpg
 
-That's it. Visit wikipedia, and you should be able to edit the page by
-clicking the blue "edit" icon that appears on mouse hover near the lower
-right corner of the text input area.
+That's it. Visit any web page (try wikipedia + edit button) and you
+should be able to edit the page by clicking the blue "edit" icon
+that appears on mouse hover near the lower right corner of the text
+input area.
 
 .. image:: https://github.com/jaalto/project--windows-emacs-client-for-firefox/raw/master/pic/firefox--its-all-text.jpg
