@@ -24,6 +24,12 @@ Requirements
 Installation
 ------------
 
+0. Configue Emacs to be on "server mode". See
+   `Emacs Wiki <http://www.emacswiki.org/emacs/EmacsClient>`_
+   for mor einformation. Basicly add this to ``~/.emacs`` ::
+
+    (server-edit)
+
 1. Copy the *.bat file in this project to Emacs installation directory
    in Windows that is named ``bin/``.
 
@@ -39,9 +45,9 @@ Installation
 
 .. image:: https://github.com/jaalto/project--windows-emacs-client-for-firefox/raw/master/pic/firefox--its-all-text--emacs.jpg
 
-That's it. Visit any web page (try wikipedia + edit button) and you
-should be able to edit the page by clicking the blue "edit" icon
-that appears on mouse hover near the lower right corner of the text
-input area.
+That's it. Have Emacs running (and M-x server-edit), visit any web
+page (try wikipedia + edit button) and you should be able to edit
+the page by clicking the blue "edit" icon that appears on mouse
+hover near the lower right corner of the text input area.
 
 .. image:: https://github.com/jaalto/project--windows-emacs-client-for-firefox/raw/master/pic/firefox--its-all-text.jpg
