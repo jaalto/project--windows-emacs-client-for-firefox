@@ -28,7 +28,7 @@ Installation
    `Emacs Wiki <http://www.emacswiki.org/emacs/EmacsClient>`_
    for more information. Basicly add this to ``~/.emacs`` ::
 
-    (server-edit)
+    (server-start)
 
 1. Copy the *.bat file in this project to Emacs installation directory
    in Windows that is named ``bin/``.
