@@ -11,9 +11,6 @@ possible.
 
 Project Homepage: <https://github.com/jaalto/project--windows-emacs-client-for-firefox>
 
-.. _pic Extension:
-.. _pic Edit Page: https://github.com/jaalto/project--windows-emacs-client-for-firefox/blob/master/pic/firefox--its-all-text.jpg
-
 Requirements
 ------------
 
@@ -46,4 +43,4 @@ That's it. Visit wikipedia, and you should be able to edit the page by
 clicking the blue "edit" icon that appears on mouse hover near the lower
 right corner of the text input area.
 
-.. image:: `pic Edit Page`_
+.. image:: https://github.com/jaalto/project--windows-emacs-client-for-firefox/raw/master/pic/firefox--its-all-text.jpg
