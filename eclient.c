@@ -53,14 +53,26 @@ int main (int argc, char * const argv[])
 {
     char *cmd = EMACSCLIENTW;
 
-    char *const param[] =
+    char *param[] =
     {
         "--no-wait",
         "--alternate-editor",
         RUNEMACS,
-        argc ? argv[1] : NULL,
+        NULL,
         NULL
     };
+
+    printf("%d %s\n", argc, argv[1]);
+
+    if (argc > 1)
+    {
+	param[3] = argv[1];
+    }
+    else
+    {
+	fprintf(stderr, "ERROR: Missing file name argument\n");
+	exit(1);
+    }
 
     printf("%s %s %s %s %s\n",
            cmd,
