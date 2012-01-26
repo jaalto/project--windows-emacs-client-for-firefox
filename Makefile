@@ -33,7 +33,10 @@
 ROOT		= C:/Program Files/emacs/bin
 RUNEMACS	= $(ROOT)/runemacs.exe
 EMACSCLIENTW	= $(ROOT)/emacsclientw.exe
-CFLAGS		= --ansi --pedantic -Wall -g
+CFLAGS_STD	= -std=c99
+CFLAGS_DEBUG	= -g
+CFLAGS_LINT	= --ansi --pedantic -Wall
+CFLAGS		= $(CFLAGS_STD) $(CFLAGS_LINT) $(CFLAGS_DEBUG)
 NAME		= eclient
 BIN		= $(NAME).exe
 
