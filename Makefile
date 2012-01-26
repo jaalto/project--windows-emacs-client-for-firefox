@@ -30,7 +30,7 @@
 #	make help
 #	make ROOT="c:/path/to/emacs-23.2/bin" all install
 
-ROOT		= c:/tmp/opt/emacs-23.3/bin
+ROOT		= C:/Program Files/emacs/bin
 RUNEMACS	= $(ROOT)/runemacs.exe
 EMACSCLIENTW	= $(ROOT)/emacsclientw.exe
 CFLAGS		= --ansi --pedantic -Wall -g
@@ -50,6 +50,7 @@ check:
 	[ -d "$(ROOT)" ]
 
 $(BIN): check eclient.c
+	@echo "COmpiling with path ROOT=$(ROOT)"
 	gcc $(CFLAGSUSER) \
 		$(CYGFLAGS) \
 		-DRUNEMACS='"$(RUNEMACS)"' \
@@ -63,7 +64,7 @@ install: all
 
 # Rule: help - display Makefile rules
 help:
-	grep "^# Rule:" Makefile | sort
+	@grep "^# Rule:" Makefile | sort
 
 .PHONY: install help check
 
