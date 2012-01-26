@@ -46,22 +46,25 @@ BIN		= $(NAME).exe
 CYGFLAGS	= -Wl,-subsystem,windows
 
 # Rule: all - compile Cygwin wrapper to emacsclient (eclient)
-all: $(BIN)
+all: check $(BIN)
+
+clean:
+	rm -f $(BIN)
 
 check:
 	# Check that ROOT directory exists. Use "make ROOT=<directory>" to change
 	[ -d "$(ROOT)" ]
 
-$(BIN): check eclient.c
+$(BIN): eclient.c
 	@echo "# Compiling with path ROOT=$(ROOT)"
 	gcc $(CFLAGSUSER) \
 		$(CYGFLAGS) \
 		-DRUNEMACS='"$(RUNEMACS)"' \
 		-DEMACSCLIENTW='"$(EMACSCLIENTW)"' \
-		$(CFLAGS) -o $(BIN) eclient.c
+		$(CFLAGS) -o $(BIN) $<
 
 # Rule: install - install to Emacs bin/ directory
-install: all
+install: $(BIN)
 	dir=$$(dirname $$(cygpath -u "$(RUNEMACS)")); \
 	install -m 755 "$(BIN)" "$$dir/$(BIN)"
 
