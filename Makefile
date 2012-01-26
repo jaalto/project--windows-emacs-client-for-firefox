@@ -65,7 +65,7 @@ $(BIN): eclient.c
 
 # Rule: install - install to Emacs bin/ directory
 install: $(BIN)
-	dir=$$(dirname $$(cygpath -u "$(RUNEMACS)")); \
+	dir="$$(dirname $$(cygpath -u '$(RUNEMACS)'))"; \
 	install -m 755 "$(BIN)" "$$dir/$(BIN)"
 
 # Rule: help - display Makefile rules
