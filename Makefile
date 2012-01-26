@@ -50,12 +50,12 @@ check:
 	[ -d "$(ROOT)" ]
 
 $(BIN): check eclient.c
-	@echo "COmpiling with path ROOT=$(ROOT)"
+	@echo "# Compiling with path ROOT=$(ROOT)"
 	gcc $(CFLAGSUSER) \
 		$(CYGFLAGS) \
 		-DRUNEMACS='"$(RUNEMACS)"' \
 		-DEMACSCLIENTW='"$(EMACSCLIENTW)"' \
-		$(CFLAGS) -o $(BIN) $<
+		$(CFLAGS) -o $(BIN) eclient.c
 
 # Rule: install - install to Emacs bin/ directory
 install: all
