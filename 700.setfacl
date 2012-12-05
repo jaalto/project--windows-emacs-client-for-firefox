@@ -1,0 +1,9 @@
+# This is Cygwin setfacl(1) file to set Windows 7+ file permissions
+#
+# file modes: 700
+# owner: foo
+# group: None
+user::rwx
+group::---
+mask:rwx
+other:---
