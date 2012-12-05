@@ -18,7 +18,7 @@ Requirements
 * `Cygwin for Windows <http://cygwin.com>`_.
   Install gcc, make and other build tools
 * `Firefox for Windows <http://firefox.com>`_.
-* `It's All Text <https://addons.mozilla.org/en-US/firefox/addon/4125>`_
+* `It's All Text <https://addons.mozilla.org/en-US/firefox/addon/its-all-text>`_
   Firefox extension.
 
 Installation
