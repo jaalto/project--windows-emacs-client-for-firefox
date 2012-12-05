@@ -38,7 +38,7 @@ Installation
 3. Compile and install the helper which the Firefox extension
    *It's all text* will be calling ::
 
-    make ROOT="C:/path/to/emacs-NN.N/bin" all install
+    make ROOT="C:/path/to/emacs-NN.N/bin" server all install
 
 4. In Firefox menu *Add-ons*, select "options" for extension "It's all text"
    and point it to compiled **eclient.exe**
