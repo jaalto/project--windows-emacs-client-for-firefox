@@ -39,6 +39,9 @@ ROOT := $(wildcard \
 
 ROOT := $(strip $(ROOT))
 
+EMACSDOTDIR     = $(HOME)/.emacs.d
+SERVERDIR	= $(EMACSDOTDIR)/server
+
 RUNEMACS	= $(ROOT)/runemacs.exe
 EMACSCLIENTW	= $(ROOT)/emacsclientw.exe
 CFLAGS_STD	= -std=c99 --ansi
@@ -56,6 +59,7 @@ CYGFLAGS	= -Wl,-subsystem,windows
 # Rule: all - compile Cygwin wrapper to emacsclient (eclient)
 all: check $(BIN)
 
+# Rule: clean - remove compiled binaries
 clean:
 	rm -f $(BIN)
 
@@ -63,6 +67,20 @@ check:
 	# Check that ROOT directory exists. Use "make ROOT=<directory>" to change
 	[ -d "$(ROOT)" ]
 
+	# Make sure HOME variable is defined	
+	[ -d "$(HOME)" ]
+
+	# Check that Emacs server directory exists for M-x server-start
+	# Create this with "make server" to use correct permissions
+	[ -d "$(SERVERDIR)" ]
+
+# Rule: server - for M-x server-start command, create correct direcory
+server:
+	# Create Emacs dot directory for server
+	mkdir -p "$(SERVERDIR)"
+	# set correct permissions
+	setfacl --file 700.setfacl "$(SERVERDIR)"
+	
 $(BIN): eclient.c
 	@echo "# Compiling with path ROOT=$(ROOT)"
 	gcc $(CFLAGSUSER) \
@@ -80,7 +98,7 @@ install: $(BIN)
 # Rule: help - display Makefile rules
 help:
 	@grep "^# Rule:" Makefile | sort
-	@echo An example: make ROOT="c:/path/to/emacs-23.2/bin" all install
+	@echo An example: make ROOT="c:/path/to/emacs-23.2/bin" server all install
 
 .PHONY: install help check
 
