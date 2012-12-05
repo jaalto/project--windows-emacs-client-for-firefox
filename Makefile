@@ -30,7 +30,15 @@
 #	make help
 #	make ROOT="c:/path/to/emacs-23.2/bin" all install
 
-ROOT		= C:/Program Files/emacs/bin
+ROOT := $(wildcard \
+ C:/Program Files (x86)/emacs*/bin\
+ C:/Program Files/emacs*/bin\
+ D:/Program Files/emacs*/bin\
+ C:/tmp/opt/emacs*/bin\
+ D:/tmp/opt/emacs*/bin)
+
+ROOT := $(strip $(ROOT))
+
 RUNEMACS	= $(ROOT)/runemacs.exe
 EMACSCLIENTW	= $(ROOT)/emacsclientw.exe
 CFLAGS_STD	= -std=c99 --ansi
@@ -65,12 +73,14 @@ $(BIN): eclient.c
 
 # Rule: install - install to Emacs bin/ directory
 install: $(BIN)
-	dir="$$(dirname $$(cygpath -u '$(RUNEMACS)'))"; \
-	install -m 755 "$(BIN)" "$$dir/$(BIN)"
+	dir="$$(dirname $$(cygpath --unix '$(RUNEMACS)'))"; \
+	install -m 755 "$(BIN)" "$$dir/$(BIN)"; \
+	echo In Firefox add-on, use path: $$(cygpath --windows "$$dir/$(BIN)")
 
 # Rule: help - display Makefile rules
 help:
 	@grep "^# Rule:" Makefile | sort
+	@echo An example: make ROOT="c:/path/to/emacs-23.2/bin" all install
 
 .PHONY: install help check
 
